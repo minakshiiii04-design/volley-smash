@@ -31,6 +31,7 @@ button {
 }
 
 .game-container {
+  overflow: visible;
   width: min(100% - 32px, 1050px);
   margin: 0 auto;
   padding: 22px 0 18px;
@@ -489,4 +490,82 @@ footer {
 
 #playerName::placeholder {
     color: #94a3b8;
+}
+
+
+/* Mobile par start form ko poora dikhane ka fix */
+.start-overlay {
+  overflow-y: auto;
+  align-items: center;
+  padding: 12px;
+}
+
+.start-card {
+  width: min(100%, 310px);
+  max-height: 100%;
+  overflow-y: auto;
+  padding: 18px 16px;
+}
+
+.big-ball {
+  font-size: 36px;
+  margin-bottom: 5px;
+}
+
+.start-card h2 {
+  font-size: 22px;
+}
+
+.start-card p {
+  margin: 6px 0 12px;
+}
+
+#playerName {
+  display: block;
+  width: 100%;
+  min-width: 0;
+  font-size: 16px;
+  margin: 10px 0;
+}
+
+@media (max-width: 600px) {
+  .court-frame {
+    min-height: 0;
+  }
+
+  .start-overlay {
+    padding: 10px;
+  }
+
+  .start-card {
+    padding: 12px;
+    border-radius: 16px;
+  }
+
+  .big-ball {
+    font-size: 30px;
+    margin-bottom: 3px;
+  }
+
+  .start-card h2 {
+    font-size: 19px;
+  }
+
+  .start-card p {
+    font-size: 12px;
+    margin: 5px 0 8px;
+  }
+
+  .start-card label {
+    font-size: 10px;
+  }
+
+  #playerName {
+    padding: 10px;
+    margin: 8px 0;
+  }
+
+  #startBtn {
+    padding: 11px;
+  }
 }
