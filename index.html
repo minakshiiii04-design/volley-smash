@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Volley Smash - 2D Volleyball</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="game-container">
+    <header class="topbar">
+      <a class="brand" href="#" aria-label="Volley Smash home">
+        <span class="brand-icon">🏐</span>
+        <span>VOLLEY<span class="brand-highlight">SMASH</span></span>
+      </a>
+      <span class="game-label">2 PLAYER ARENA</span>
+    </header>
+
+    <section class="intro">
+      <p class="eyebrow">READY, SET, SMASH!</p>
+      <h1>Let's Play <span>Volleyball!</span></h1>
+      <p>Jump high. Hit hard. Own the court.</p>
+    </section>
+
+    <section class="scoreboard">
+      <div class="team team-blue">
+        <span class="team-icon">🔵</span>
+        <div>
+          <span class="team-name">YOU</span>
+          <span class="team-subtitle">BLUE TEAM</span>
+        </div>
+        <strong id="playerScore">0</strong>
+      </div>
+
+      <div class="score-middle">
+        <span>VS</span>
+        <small id="gameStatus">READY?</small>
+      </div>
+
+      <div class="team team-pink">
+        <strong id="cpuScore">0</strong>
+        <div>
+          <span class="team-name">RIVAL</span>
+          <span class="team-subtitle">PINK TEAM</span>
+        </div>
+        <span class="team-icon">🩷</span>
+      </div>
+    </section>
+
+    <section class="court-frame">
+      <canvas id="gameCanvas"
+        width="900" height="500"
+        aria-label="Volleyball game court">
+      </canvas>
+
+      <div class="start-overlay" id="startOverlay">
+        <div class="start-card">
+          <span class="big-ball">🏐</span>
+          <h2 id="overlayTitle">Ready to Smash?</h2>
+          <p id="overlayText">
+            Enter your name and challenge the computer!
+          </p>
+          <label for="playerName">ENTER PLAYER NAME</label>
+
+          <input type="text" id="playerName" placeholder="Your name..." maxlength="16" autocomplete="nickname">
+          
+          <button id="startBtn">START GAME <span>▶</span></button>
+        </div>
+      </div>
+    </section>
+
+    <section class="controls-info">
+      <div>
+        <span class="control-icon">⌨️</span>
+        <div>
+          <strong>KEYBOARD</strong>
+          <p>Move: A / D or ← / →</p>
+          <p>Jump: W / ↑ / Space</p>
+        </div>
+      </div>
+      <div>
+        <span class="control-icon">📱</span>
+        <div>
+          <strong>MOBILE</strong>
+          <p>Use the buttons below</p>
+          <p>Move, jump and hit the ball</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="mobile-controls" aria-label="Touch controls">
+      <div class="move-buttons">
+        <button class="control-btn" data-control="left"
+          aria-label="Move left">◀</button>
+        <button class="control-btn" data-control="right"
+          aria-label="Move right">▶</button>
+      </div>
+      <div class="action-buttons">
+        <button class="control-btn jump-btn" data-control="jump">
+          JUMP ↑
+        </button>
+        <button class="control-btn hit-btn" data-control="hit">
+          HIT! 🏐
+        </button>
+      </div>
+    </section>
+
+    <footer>
+      <span>🏐 VOLLEY SMASH</span>
+      <span>Made for the love of the game</span>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
